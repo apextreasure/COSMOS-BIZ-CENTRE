@@ -114,15 +114,21 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, langua
             >
               <div className="space-y-3">
                 {/* Sector & Location Metadata */}
-                <div className="flex items-center justify-between gap-2 text-sm sm:text-[15px] text-[#484F5B] pb-2 border-b border-[#EFE7DC]">
-                  <span className="inline-flex items-center gap-1.5 font-bold uppercase tracking-wider text-[#C85A32]">
-                    {getCategoryIcon(item.category)}
-                    <span>{isEn ? item.sectorEn : item.sectorBm}</span>
-                  </span>
-                  <span className="flex items-center gap-1 font-medium text-[#5A6270] shrink-0">
-                    <MapPin className="w-3.5 h-3.5 text-[#D97706]" />
-                    <span>{isEn ? item.locationEn : item.locationBm}</span>
-                  </span>
+                <div className="rounded-2xl border border-[#F0E3D2] bg-gradient-to-br from-[#FFF8EA] via-white to-[#FAF5ED] p-3.5 shadow-2xs">
+                  <div className="flex items-start gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-[#EAD8BF] text-[#C85A32] flex items-center justify-center shadow-2xs shrink-0">
+                      {getCategoryIcon(item.category)}
+                    </div>
+                    <div className="min-w-0 flex-1 space-y-2">
+                      <div className="text-[13px] sm:text-sm font-extrabold uppercase tracking-[0.08em] leading-snug text-[#C85A32] break-words">
+                        {isEn ? item.sectorEn : item.sectorBm}
+                      </div>
+                      <div className="inline-flex max-w-full items-start gap-1.5 rounded-full bg-white/90 border border-[#EAD8BF] px-2.5 py-1 text-[13px] sm:text-sm font-semibold leading-snug text-[#4B5563] shadow-2xs">
+                        <MapPin className="w-3.5 h-3.5 text-[#D97706] shrink-0 mt-0.5" />
+                        <span className="min-w-0 break-words">{isEn ? item.locationEn : item.locationBm}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Project / Client Title */}
