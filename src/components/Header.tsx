@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E8DFD3] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-x-4 gap-y-2 py-3 md:py-0 md:h-20">
           {/* Zone 1: Brand Wordmark (Single visual anchor) */}
           <div className="shrink-0">
             <button
@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Zone 2: Navigation Links (5 main links, clean text with active states) */}
           <nav
-            className="hidden lg:flex items-center space-x-1 xl:space-x-2"
+            className="hidden xl:flex items-center space-x-1 xl:space-x-2"
             aria-label="Primary Navigation"
           >
             {navLinks.map((item) => {
@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
           </nav>
 
           {/* Zone 3: Primary Actions (WhatsApp CTA + Compact EN/BM Switch) */}
-          <div className="flex items-center space-x-2.5 sm:space-x-3.5">
+          <div className="flex w-full md:w-auto shrink-0 items-center justify-between md:justify-end gap-2.5 sm:gap-3.5">
             {/* Language Switch */}
             <button
               onClick={onToggleLanguage}
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Hamburger Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex lg:hidden items-center justify-center p-2 text-[#2C313A] hover:bg-[#EFE7DC] rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-[#C85A32]"
+              className="touch-target flex xl:hidden items-center justify-center p-2 text-[#2C313A] hover:bg-[#EFE7DC] rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-[#C85A32]"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#E8DFD3] bg-[#FAF8F5] shadow-lg animate-in slide-in-from-top-2 duration-200">
+        <div className="xl:hidden border-t border-[#E8DFD3] bg-[#FAF8F5] shadow-lg animate-in slide-in-from-top-2 duration-200">
           <div className="px-4 pt-3 pb-6 space-y-1.5 max-w-md mx-auto">
             {navLinks.map((item) => {
               const isActive = currentPage === item.id;

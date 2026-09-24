@@ -23,6 +23,7 @@ import {
   Users2,
   Building,
   HelpCircle,
+  MapPin,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -471,11 +472,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, language }) => {
               key={item.id}
               className="glass-panel p-6 sm:p-7 rounded-2xl border border-[#E8DFD3] shadow-2xs hover:shadow-md transition-all space-y-3"
             >
-              <div className="flex items-center justify-between text-sm sm:text-[15px] text-[#484F5B]">
-                <span className="font-bold text-[#C85A32] uppercase tracking-wider">
-                  {isEn ? item.sectorEn : item.sectorBm}
-                </span>
-                <span className="font-medium">{isEn ? item.locationEn : item.locationBm}</span>
+              <div className="flex items-start gap-3 min-w-0 rounded-2xl border border-[#EAD8BF] bg-[#FAF5ED] p-3.5">
+                <div className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl border border-[#EAD8BF] bg-white text-[#C85A32]">
+                  <Building className="w-5 h-5" />
+                </div>
+                <div className="min-w-0 flex-1 space-y-2">
+                  <div className="font-bold text-sm text-[#C85A32] uppercase tracking-wider leading-snug break-words">
+                    {isEn ? item.sectorEn : item.sectorBm}
+                  </div>
+                  <div className="inline-flex max-w-full items-start gap-1.5 rounded-xl border border-[#EAD8BF] bg-white px-2.5 py-1 text-sm font-medium leading-snug text-[#484F5B]">
+                    <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#D97706]" />
+                    <span className="min-w-0 break-words">{isEn ? item.locationEn : item.locationBm}</span>
+                  </div>
+                </div>
               </div>
 
               <h3 className="text-xl font-bold text-[#1E2229] font-display">
@@ -488,7 +497,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, language }) => {
 
               <div className="pt-3 border-t border-[#EFE8DD] flex items-center justify-between text-sm sm:text-[15px] text-[#5A6270]">
                 <span>{isEn ? 'Client: ' : 'Pelanggan: '}<strong className="text-[#1E2229]">{item.clientOrEntity}</strong></span>
-                <span className="text-amber-900 font-bold bg-amber-100/90 px-2.5 py-0.5 rounded text-sm">Kosmos Profile</span>
+
               </div>
             </div>
           ))}

@@ -153,9 +153,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, langua
                   <strong className="text-[#1E2229]">{isEn ? 'Entity: ' : 'Entiti: '}</strong>
                   {item.clientOrEntity}
                 </span>
-                <span className="px-3 py-1 rounded-md bg-amber-100/90 text-amber-900 font-bold text-sm tracking-wide">
-                  Kosmos Profile
-                </span>
+
               </div>
             </div>
           ))}

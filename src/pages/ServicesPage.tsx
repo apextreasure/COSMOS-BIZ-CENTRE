@@ -99,9 +99,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
       {/* 2. FILTER & SEARCH CONTROLS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-6 border-b border-[#E8DFD3]">
+        <div className="flex flex-col items-stretch gap-4 pb-6 border-b border-[#E8DFD3]">
           {/* Segmented Category Buttons */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          <div className="flex flex-wrap items-center gap-2">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -118,7 +118,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           </div>
 
           {/* Search Box */}
-          <div className="relative min-w-[260px] md:w-72">
+          <div className="relative w-full sm:max-w-sm">
             <Search className="w-4 h-4 text-[#717A88] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
