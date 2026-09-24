@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E8DFD3] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-x-4 gap-y-2 py-3 md:py-0 md:h-20">
+        <div className="flex items-center justify-between gap-1 sm:gap-4 h-20">
           {/* Zone 1: Brand Wordmark (Single visual anchor) */}
           <div className="shrink-0">
             <button
@@ -78,11 +78,11 @@ export const Header: React.FC<HeaderProps> = ({
           </nav>
 
           {/* Zone 3: Primary Actions (WhatsApp CTA + Compact EN/BM Switch) */}
-          <div className="flex w-full md:w-auto shrink-0 items-center justify-between md:justify-end gap-2.5 sm:gap-3.5">
+          <div className="flex shrink-0 items-center justify-end gap-2.5 sm:gap-3.5">
             {/* Language Switch */}
             <button
               onClick={onToggleLanguage}
-              className="touch-target px-3.5 py-2 border border-[#D5C9B8] bg-white/90 hover:bg-white text-[#2C313A] text-base font-semibold rounded-lg shadow-2xs transition-all flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#C85A32]"
+              className="touch-target px-3.5 py-2 border border-[#D5C9B8] bg-white/90 hover:bg-white text-[#2C313A] text-base font-semibold rounded-lg shadow-2xs transition-all hidden xl:flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#C85A32]"
               aria-label={`Switch language to ${language === 'en' ? 'Bahasa Melayu' : 'English'}`}
               title={`Switch language to ${language === 'en' ? 'Bahasa Melayu' : 'English'}`}
             >
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="touch-target px-4 py-2.5 bg-[#128C7E] hover:bg-[#075E54] text-white text-[15px] sm:text-[16px] font-semibold rounded-lg shadow-sm hover:shadow transition-all flex items-center gap-2 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-[#128C7E]"
+              className="touch-target px-4 py-2.5 bg-[#128C7E] hover:bg-[#075E54] text-white text-[15px] sm:text-[16px] font-semibold rounded-lg shadow-sm hover:shadow transition-all hidden xl:flex items-center gap-2 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-[#128C7E]"
               aria-label="WhatsApp Enquiry (opens in new tab)"
             >
               <MessageCircle className="w-5 h-5 fill-current" />
@@ -149,6 +149,16 @@ export const Header: React.FC<HeaderProps> = ({
               );
             })}
 
+            <div className="pt-4 mt-2 border-t border-[#E8DFD3]">
+              <button
+                onClick={onToggleLanguage}
+                className="touch-target w-full flex items-center justify-between gap-3 px-4 py-3 bg-white border border-[#D5C9B8] rounded-xl text-base font-semibold text-[#2C313A] focus-visible:ring-2 focus-visible:ring-[#C85A32]"
+                aria-label={`Switch language to ${language === 'en' ? 'Bahasa Melayu' : 'English'}`}
+              >
+                <span className="flex items-center gap-2"><Globe className="w-5 h-5 text-[#D97706]" />{language === 'en' ? 'Language' : 'Bahasa'}</span>
+                <span><span className={language === 'en' ? 'text-[#C85A32]' : ''}>EN</span> | <span className={language === 'bm' ? 'text-[#C85A32]' : ''}>BM</span></span>
+              </button>
+            </div>
             {/* Mobile Contact Quick Actions */}
             <div className="pt-4 mt-2 border-t border-[#E8DFD3] grid grid-cols-2 gap-2">
               <a
