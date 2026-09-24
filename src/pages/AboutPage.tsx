@@ -89,7 +89,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, language }) =>
             </div>
           </div>
 
-          {/* Right Column: Objectives (Proposed COSMOS Positioning) */}
+          {/* Right Column: Our Objectives */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#FAF5ED] p-8 sm:p-9 rounded-3xl border border-[#E9DFCF] shadow-sm space-y-6">
               <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, language }) =>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-[#1E2229] font-display">
-                    {isEn ? 'Proposed Objectives' : 'Objektif Pusat'}
+                    {isEn ? 'Our Objectives' : 'Objektif Kami'}
                   </h3>
                   <span className="text-sm sm:text-[15px] text-[#484F5B] font-medium">
                     {isEn ? 'COSMOS BIZ CENTRE strategic goals' : 'Sasaran strategik COSMOS BIZ CENTRE'}
@@ -168,7 +168,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, language }) =>
         </div>
       </section>
 
-      {/* 3. PROPOSED VISION & MISSION (Proposed Brand Positioning) */}
+      {/* 3. VISION & MISSION */}
       <section className="bg-gradient-to-r from-[#212630] to-[#1A1D24] text-white py-16 rounded-3xl max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 shadow-xl">
         <div className="max-w-4xl mx-auto space-y-10">
           <div className="text-center space-y-2">
@@ -180,8 +180,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, language }) =>
             </h2>
             <p className="text-[#C2C9D6] text-base italic">
               {isEn
-                ? 'Proposed strategic positioning for COSMOS BIZ CENTRE'
-                : 'Kedudukan strategik yang dicadangkan bagi COSMOS BIZ CENTRE'}
+                ? 'Our direction for one-stop documentation and business support'
+                : 'Hala tuju kami untuk dokumentasi dan sokongan perniagaan sehenti'}
             </p>
           </div>
 
@@ -268,7 +268,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, language }) =>
               </div>
 
               <div className="pt-4 border-t border-[#EFE7DC] text-sm text-[#5A6270]">
-                <span>{isEn ? 'Kosmos Group Profile Reference: Page 4' : 'Rujukan Profil Kosmos Group: Halaman 4'}</span>
+                <span>{isEn ? 'Documented in Kosmos Group Profile' : 'Didokumentasikan dalam Profil Kosmos Group'}</span>
               </div>
             </div>
           ))}
