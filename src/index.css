@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1E2229;
+    background-color: #FAF8F5;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  /* Keyboard accessibility focus rings */
+  :focus-visible {
+    outline: 2px solid #C85A32;
+    outline-offset: 3px;
+  }
+}
+
+/* Glassmorphism card surfaces with high-contrast text backing */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(215, 204, 192, 0.55);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(225, 218, 208, 0.45);
+}
+
+.glass-panel-warm {
+  background: rgba(254, 250, 243, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 169, 59, 0.22);
+}
+
+/* Touch target accessibility minimum height without overriding element display */
+.touch-target {
+  min-height: 44px;
+}
+
+/* Animations for Hero Cosmic Vector Illustration */
+@keyframes orbit-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float-badge-tr {
+  0%, 100% {
+    transform: translate(325px, 95px) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(325px, 95px) translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes float-badge-bl {
+  0%, 100% {
+    transform: translate(65px, 340px) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(65px, 340px) translateY(7px) rotate(1deg);
+  }
+}
+
+@keyframes seal-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes beacon-ping {
+  0% {
+    r: 9;
+    opacity: 0.9;
+  }
+  50% {
+    r: 22;
+    opacity: 0;
+  }
+  100% {
+    r: 22;
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer-line {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes orbit-sweep {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 40;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.anim-orbit-1 {
+  transform-origin: 250px 250px;
+  animation: orbit-spin-slow 55s linear infinite;
+}
+
+.anim-orbit-2 {
+  transform-origin: 250px 250px;
+  animation: orbit-spin-reverse 42s linear infinite;
+}
+
+.anim-orbit-3 {
+  transform-origin: 250px 250px;
+  animation: orbit-spin-slow 30s linear infinite;
+}
+
+.anim-badge-topright {
+  animation: float-badge-tr 4.5s ease-in-out infinite;
+}
+
+.anim-badge-bottomleft {
+  animation: float-badge-bl 5.2s ease-in-out infinite;
+}
+
+.anim-seal-spin {
+  transform-origin: 16px 16px;
+  animation: seal-rotation 24s linear infinite;
+}
+
+.anim-beacon-wave {
+  animation: beacon-ping 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.anim-shimmer {
+  animation: shimmer-line 3s ease-in-out infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .anim-orbit-1,
+  .anim-orbit-2,
+  .anim-orbit-3,
+  .anim-badge-topright,
+  .anim-badge-bottomleft,
+  .anim-seal-spin,
+  .anim-beacon-wave,
+  .anim-shimmer {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "COSMOS BIZ CENTRE",
+  "description": "One-Stop Business & Documentation Services - Your Business. Your Documents. One Centre.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
