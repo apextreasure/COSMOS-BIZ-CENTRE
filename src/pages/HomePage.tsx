@@ -268,6 +268,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, language }) => {
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.triedFallback) {
+                        target.dataset.triedFallback = 'true';
+                        const parts = service.image.split('/');
+                        const filename = parts[parts.length - 1]?.split('?')[0];
+                        if (filename) {
+                          target.src = `/assets/images/${filename}`;
+                        }
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-75" />
 

@@ -1,5 +1,18 @@
 export type Language = 'en' | 'bm';
 
+import serviceBusinessReg from '../assets/images/service_business_reg_1790264640619.jpg';
+import serviceGovDoc from '../assets/images/service_gov_doc_1790264662477.jpg';
+import serviceForeignWorker from '../assets/images/service_foreign_worker_1790264677951.jpg';
+import serviceVisaDistinct from '../assets/images/service_visa_distinct_1790265251688.jpg';
+import serviceBankInsurance from '../assets/images/service_bank_insurance_1790265166219.jpg';
+import serviceTravelBooking from '../assets/images/service_travel_booking_1790265181501.jpg';
+import servicePrintLogistics from '../assets/images/service_print_logistics_1790264738421.jpg';
+import serviceProposalProfile from '../assets/images/service_proposal_profile_1790264712693.jpg';
+import serviceRecruitmentManpower from '../assets/images/service_recruitment_manpower_1790264701687.jpg';
+import serviceLegalDoc from '../assets/images/service_legal_doc_1790265194126.jpg';
+import servicePropertySupport from '../assets/images/service_property_support_1790265214086.jpg';
+import serviceAdminClean from '../assets/images/service_admin_clean_1790265228372.jpg';
+
 export interface ServiceItem {
   id: string;
   number: string;
@@ -94,7 +107,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Briefcase',
     category: 'setup',
-    image: '/src/assets/images/service_business_reg_1790264640619.jpg',
+    image: serviceBusinessReg,
     imageAltEn: 'Professional Malay female entrepreneur reviewing company startup registration documents',
     imageAltBm: 'Usahawan wanita Melayu profesional menyemak dokumen pendaftaran perniagaan',
   },
@@ -119,7 +132,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'FileText',
     category: 'documentation',
-    image: '/src/assets/images/service_gov_doc_1790264662477.jpg',
+    image: serviceGovDoc,
     imageAltEn: 'Professional Malay male documentation consultant reviewing official statutory forms and dossiers',
     imageAltBm: 'Perunding dokumentasi lelaki Melayu profesional menyemak borang statutori rasmi',
   },
@@ -144,7 +157,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Users',
     category: 'manpower',
-    image: '/src/assets/images/service_foreign_worker_1790264677951.jpg',
+    image: serviceForeignWorker,
     imageAltEn: 'Professional Malay female consultant organizing foreign worker permit dossiers and compliance checklists',
     imageAltBm: 'Perunding wanita Melayu profesional menyusun dosier permit pekerja asing dan senarai semak pematuhan',
   },
@@ -169,7 +182,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Compass',
     category: 'documentation',
-    image: '/src/assets/images/service_visa_distinct_1790265251688.jpg',
+    image: serviceVisaDistinct,
     imageAltEn: 'Professional Malay male advisor holding international pass dossier explaining procedures at consultation desk',
     imageAltBm: 'Penasihat lelaki Melayu profesional memegang dosier pas antarabangsa menerangkan prosedur di meja rundingan',
   },
@@ -194,7 +207,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'ShieldCheck',
     category: 'support',
-    image: '/src/assets/images/service_bank_insurance_1790265166219.jpg',
+    image: serviceBankInsurance,
     imageAltEn: 'Professional Malay businesswoman in corporate blazer reviewing bank schedules and financial dossiers',
     imageAltBm: 'Usahawan wanita Melayu profesional menyemak jadual perbankan dan dosier kewangan',
   },
@@ -219,7 +232,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Plane',
     category: 'support',
-    image: '/src/assets/images/service_travel_booking_1790265181501.jpg',
+    image: serviceTravelBooking,
     imageAltEn: 'Professional Malay male corporate logistics coordinator arranging flight itineraries and transit schedules on monitors',
     imageAltBm: 'Penyelaras logistik lelaki Melayu profesional menyusun jadual penerbangan dan transit korporat pada monitor',
   },
@@ -244,7 +257,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Printer',
     category: 'support',
-    image: '/src/assets/images/service_print_logistics_1790264738421.jpg',
+    image: servicePrintLogistics,
     imageAltEn: 'Modern on-site digital document scanning, high-resolution photocopy, and binding station',
     imageAltBm: 'Pusat pengimbasan dokumen digital, fotokopi resolusi tinggi, dan penjilidan rapi',
   },
@@ -269,7 +282,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Layers',
     category: 'setup',
-    image: '/src/assets/images/service_proposal_profile_1790264712693.jpg',
+    image: serviceProposalProfile,
     imageAltEn: 'Professional Malay businesswoman examining corporate profile binder and commercial presentation proposal',
     imageAltBm: 'Usahawan wanita Melayu menyemak profil korporat dan kertas cadangan pembentangan komersial',
   },
@@ -294,7 +307,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'UserCheck',
     category: 'manpower',
-    image: '/src/assets/images/service_recruitment_manpower_1790264701687.jpg',
+    image: serviceRecruitmentManpower,
     imageAltEn: 'Professional Malay male recruitment executive conducting structured workforce interview in corporate meeting room',
     imageAltBm: 'Eksekutif pengambilan pekerja lelaki Melayu profesional menjalankan temu duga tenaga kerja',
   },
@@ -319,7 +332,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Scale',
     category: 'documentation',
-    image: '/src/assets/images/service_legal_doc_1790265194126.jpg',
+    image: serviceLegalDoc,
     imageAltEn: 'Professional Malay male legal documentation officer reviewing agreements and statutory documents',
     imageAltBm: 'Pegawai dokumentasi undang-undang lelaki Melayu profesional menyemak perjanjian dan dokumen statutori',
   },
@@ -344,7 +357,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'Building2',
     category: 'support',
-    image: '/src/assets/images/service_property_support_1790265214086.jpg',
+    image: servicePropertySupport,
     imageAltEn: 'Professional Malay businesswoman reviewing commercial property floor plans and tenancy paperwork',
     imageAltBm: 'Usahawan wanita Melayu profesional menyemak pelan lantai hartanah komersial dan perjanjian sewaan',
   },
@@ -369,7 +382,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     icon: 'ClipboardList',
     category: 'support',
-    image: '/src/assets/images/service_admin_clean_1790265228372.jpg',
+    image: serviceAdminClean,
     imageAltEn: 'Smiling professional Malay female administrative executive at reception desk with clean backdrop',
     imageAltBm: 'Eksekutif pentadbiran wanita Melayu profesional tersenyum di kaunter khidmat pelanggan dengan latar belakang kemas',
   },
